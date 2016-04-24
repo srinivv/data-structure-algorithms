@@ -1,6 +1,6 @@
 package com.local.dev;
 
-public class FindMaxNumber {
+public class FindMaxNumber { 
 
 	public static void main(String[] args) {
 		int[] arr = { 10, 2, 1, 5, 20 };
