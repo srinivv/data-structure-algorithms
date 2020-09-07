@@ -13,8 +13,8 @@ public class DepthFirstSearchExampleNeighbourList {
 		List<Node> neighbours;
  
 		Node(int data) {
-			this.data=data;
-			this.neighbours=new ArrayList<>();
+			this.data = data;
+			this.neighbours = new ArrayList<>();
  		}
 		
 		public void addneighbours(Node neighbourNode) {
