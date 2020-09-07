@@ -9,7 +9,9 @@ public class BreadthFirstSearchExampleNeighbourList {
  
 	private Queue<Node> queue;
 	static ArrayList<Node> nodes = new ArrayList<Node>();
+	
 	static class Node {
+		
 		int data;
 		boolean visited;
 		List<Node> neighbours;
@@ -17,8 +19,7 @@ public class BreadthFirstSearchExampleNeighbourList {
 		Node(int data) {
 			this.data = data;
 			this.neighbours = new ArrayList<>();
- 
-		}
+ 		}
     
 		public void addneighbours(Node neighbourNode) {
 			this.neighbours.add(neighbourNode);
@@ -39,22 +40,22 @@ public class BreadthFirstSearchExampleNeighbourList {
 	}
  
 	public void bfs(Node node) {
+		
 		queue.add(node);
 		node.visited = true;
+		
 		while (!queue.isEmpty()) {
- 
-			Node element = queue.remove();
+ 			Node element = queue.remove();
 			System.out.print(element.data + "t");
 			List<Node> neighbours = element.getNeighbours();
 			for (int i = 0; i < neighbours.size(); i++) {
 				Node n = neighbours.get(i);
 				if (n != null && !n.visited) {
 					queue.add(n);
-					n.visited=true;
+					n.visited = true;
  				}
 			}
- 
-		}
+ 		}
 	}
  
 	public static void main(String arg[]) {
