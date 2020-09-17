@@ -1,8 +1,6 @@
 //To check if given Binary tree is a BST or not 
-  
  
-public class BinaryTree 
-{ 
+public class BinaryTree { 
     Node root; 
   
     boolean isBST()  { 
