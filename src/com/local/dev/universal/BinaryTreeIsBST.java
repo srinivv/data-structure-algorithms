@@ -1,4 +1,4 @@
-package com.local.ms;
+package com.local.dev.universal;
 
 // Determine given Binary tree is a BST or not 
 

@@ -1,4 +1,4 @@
-package com.local.ms;
+package com.local.dev.universal;
 
 // Detect and remove loop in linked list 
 

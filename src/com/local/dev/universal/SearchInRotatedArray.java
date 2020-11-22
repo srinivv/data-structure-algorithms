@@ -1,4 +1,4 @@
-package com.local.ms;
+package com.local.dev.universal;
 
 // To search an element in sorted and rotated array using single pass of Binary Search
 

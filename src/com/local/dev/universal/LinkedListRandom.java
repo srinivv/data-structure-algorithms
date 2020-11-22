@@ -1,4 +1,4 @@
-package com.local.ms;
+package com.local.dev.universal;
 
 // To clone a linked list with random pointers 
 

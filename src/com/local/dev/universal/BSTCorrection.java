@@ -1,4 +1,4 @@
-package com.local.ms;
+package com.local.dev.universal;
 
 // Logic to correct the BST if two nodes are swapped 
 
