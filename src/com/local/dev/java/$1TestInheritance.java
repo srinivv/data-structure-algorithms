@@ -1,9 +1,9 @@
-package com.local.dev.inheritance;
+package com.local.dev.java;
 
-public class Test {
+public class $1TestInheritance {
 
 	public static void main(String[] args) {
-		Parent p = new Child();
+		$1Parent p = new $1Child();
 		
 		String publicMethod1 = p.publicMethod1(1);
 		System.out.println(publicMethod1);

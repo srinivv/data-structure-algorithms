@@ -1,4 +1,4 @@
-package com.local.dev.fibonacci;
+package com.local.dev;
 
 public class FibonacciNumbers {
 

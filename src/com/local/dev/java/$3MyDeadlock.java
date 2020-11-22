@@ -1,5 +1,5 @@
-package com.local.dev.thread;
-public class MyDeadlock {
+package com.local.dev.java;
+public class $3MyDeadlock {
  
     String str1 = "Java";
     String str2 = "UNIX";
@@ -29,7 +29,7 @@ public class MyDeadlock {
     };
      
     public static void main(String a[]){
-        MyDeadlock mdl = new MyDeadlock();
+        $3MyDeadlock mdl = new $3MyDeadlock();
         mdl.trd1.start();
         mdl.trd2.start();
     }

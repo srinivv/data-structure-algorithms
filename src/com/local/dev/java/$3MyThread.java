@@ -1,6 +1,6 @@
-package com.local.dev.thread;
+package com.local.dev.java;
 
-public class MyThread extends Thread {
+public class $3MyThread extends Thread {
 	public void run() {
 		try {
 			method1();

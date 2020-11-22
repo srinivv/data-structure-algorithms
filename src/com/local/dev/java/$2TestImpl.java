@@ -1,6 +1,6 @@
-package com.local.dev.inteface;
+package com.local.dev.java;
 
-public class Test implements TestInterface {
+public class $2TestImpl implements $2TestInterface {
 
 	@Override
 	public void testMe(String str) {

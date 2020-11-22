@@ -1,4 +1,4 @@
-package com.local.dev.singleton;
+package com.local.dev.java;
 
 public class Singleton {
 	
