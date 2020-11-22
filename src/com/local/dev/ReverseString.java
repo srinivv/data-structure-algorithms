@@ -4,6 +4,15 @@ public class ReverseString {
 	public static void main(String[] args) {
 		reverse1();
 		reverse2();
+		
+		// String testing... important API to remember
+		
+		String str = "srini";
+		System.out.println(str.codePointAt(1));
+
+		String str1 = "aaaaa";
+		System.out.println(str1.toCharArray());
+
 	}
 
 	private static void reverse1() {
