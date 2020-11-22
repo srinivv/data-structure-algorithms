@@ -1,44 +1,50 @@
 package com.local.dev.sort;
 
 public class MergeSort {
-	public int[] sort(int array[], int low, int high) throws Exception {
-		int first = low;
-		int last = high;
 
-		if (first >= last) {
-			return array;
-		}
-		int mid = (first + last) / 2;
-		
-		// Partition the list into two lists and sort them recursively
-		sort(array, first, mid);
-		sort(array, mid + 1, last);
-		
-		// Merge the two sorted lists
-		int end_lo = mid;
-		int start_hi = mid + 1;
-		while ((first <= end_lo) && (start_hi <= last)) {
+    public static void main(String[] args) {
+        int[] intArray = { 20, 35, -15, 7, 55, 1, -22 };
 
-			if (array[first] < array[start_hi]) {
-				first++;
-			} else {
-				// a[start] >= a[start_hi] The next element comes from the second list, 
-				// move the a[start_hi] element into the next position 
-				// and shuffle all the other elements up.
-				int temp = array[start_hi];
-				for (int i = start_hi - 1; i >= first; i--) {
-					array[i + 1] = array[i];
-				}
-				array[first] = temp;
-				first++;
-				end_lo++;
-				start_hi++;
-			}
-		}
-		return array;
-	}
+        mergeSort(intArray, 0, intArray.length);
 
-	public int[] sort(int array[]) throws Exception {
-		return sort(array, 0, array.length - 1);
-	}
+        for (int i = 0; i < intArray.length; i++) {
+            System.out.println(intArray[i]);
+        }
+    }
+
+    // { 20, 35, -15, 7, 55, 1, -22 }
+    public static void mergeSort(int[] input, int start, int end) {
+
+        if (end - start < 2) {
+            return;
+        }
+
+        int mid = (start + end) / 2;
+        mergeSort(input, start, mid);
+        mergeSort(input, mid, end);
+        merge(input, start, mid, end);
+    }
+
+    // { 20, 35, -15, 7, 55, 1, -22 }
+    public static void merge(int[] input, int start, int mid, int end) {
+
+        if (input[mid - 1] <= input[mid]) {
+            return;
+        }
+
+        int i = start;
+        int j = mid;
+        int tempIndex = 0;
+
+        int[] temp = new int[end - start];
+        while (i < mid && j < end) {
+            temp[tempIndex++] = input[i] <= input[j] ? input[i++] : input[j++];
+        }
+
+        System.arraycopy(input, i, input, start + tempIndex, mid - i);
+        System.arraycopy(temp, 0, input, start, tempIndex);
+
+
+    }
+
 }

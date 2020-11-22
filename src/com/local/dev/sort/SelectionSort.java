@@ -1,26 +1,45 @@
 package com.local.dev.sort;
 
-public class SelectionSort extends $Base {
-	public int[] sort(int array[]) throws Exception {
-		for (int i = 0; i < array.length; i++) {
-			int min = i;
+public class SelectionSort {
 
-			// Find the smallest element in the unsorted list
-			for (int j = i + 1; j < array.length; j++) {
-				if (array[j] < array[min]) {
-					min = j;
-				}
-			}
+    public static void main(String[] args) {
 
-			// Swap the smallest unsorted element into the end of the sorted list.
-			swap(array, min, i);
-		}
-		return array;
-	}
-	
-	public void swap(int[] array, int i, int j) {
-		int t = array[i];
-		array[i] = array[j];
-		array[j] = t;
-	}
+
+        int[] intArray = { 20, 35, -15, 7, 55, 1, -22 };
+
+        for (int lastUnsortedIndex = intArray.length - 1; lastUnsortedIndex > 0;
+                lastUnsortedIndex--) {
+
+            int largest = 0;
+
+            for (int i = 1; i <= lastUnsortedIndex; i++) {
+                if (intArray[i] > intArray[largest]) {
+                    largest = i;
+                }
+            }
+
+            swap(intArray, largest, lastUnsortedIndex);
+
+        }
+
+
+        for (int i = 0; i < intArray.length; i++) {
+            System.out.println(intArray[i]);
+        }
+
+
+    }
+
+    public static void swap(int[] array, int i, int j) {
+
+        if (i == j) {
+            return;
+        }
+
+        int temp = array[i];
+        array[i] = array[j];
+        array[j] = temp;
+
+    }
+
 }
