@@ -5,35 +5,57 @@ import java.util.Queue;
 
 // Connect nodes at the same level
 
+/*
+	Input Tree
+       A
+      / \
+     B   C
+    / \   \
+   D   E   F
+
+
+	Output Tree
+       A--->NULL
+      / \
+     B-->C-->NULL
+    / \   \
+   D-->E-->F-->NULL
+   
+*/
 public class ConnectNodes {
 
-	Node root;
-
-	void connect(Node p) {
-		Queue<Node> q = new LinkedList<>();
-
-		q.add(root);
-
-		Node temp = null;
-		while (!q.isEmpty()) {
-			int n = q.size();
-			for (int i = 0; i < n; i++) {
-				Node prev = temp;
-				temp = q.poll();
-
-				if (i > 0)
-					prev.nextRight = temp;
-
-				if (temp.left != null)
-					q.add(temp.left);
-
-				if (temp.right != null)
-					q.add(temp.right);
-			}
-
-			temp.nextRight = null;
-		}
-	}
+	Node root; 
+	
+    void connect(Node p)  { 
+        // initialize queue to hold nodes at same level  
+        Queue<Node> q = new LinkedList<>(); 
+  
+        q.add(root); // adding nodes to tehe queue 
+  
+        Node temp = null; // initializing prev to null 
+        while (!q.isEmpty()) { 
+            int n = q.size(); 
+            for (int i = 0; i < n; i++) { 
+                Node prev = temp; 
+                temp = q.poll(); 
+  
+                // i > 0 because when i is 0 prev points 
+                // the last node of previous level,  
+                // so we skip it 
+                if (i > 0) 
+                    prev.nextRight = temp;  
+  
+                if (temp.left != null) 
+                    q.add(temp.left); 
+  
+                if (temp.right != null) 
+                    q.add(temp.right); 
+            } 
+  
+            // pointing last node of the nth level to null 
+            temp.nextRight = null;  
+        } 
+    } 
 
 	public static void main(String args[]) {
 		ConnectNodes tree = new ConnectNodes();
@@ -43,8 +65,10 @@ public class ConnectNodes {
 		tree.root.right = new Node(2);
 		tree.root.left.left = new Node(3);
 
+		// Populates nextRight pointer in all nodes 
 		tree.connect(tree.root);
 
+		// Let us check the values of nextRight pointers 
 		System.out.println("Following are populated nextRight pointers in " + "the tree"
 				+ "(-1 is printed if there is no nextRight)");
 		int a = tree.root.nextRight != null ? tree.root.nextRight.data : -1;
