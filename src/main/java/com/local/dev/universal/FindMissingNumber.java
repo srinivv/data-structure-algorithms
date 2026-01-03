@@ -22,7 +22,7 @@ package com.local.dev.universal;
 		Create a variable sum to store the sum of array elements.
 		Traverse the array from start to end.
 		Update the value of sum as sum = sum + array[i]
-		Print the missing number as sumtotal – sum	
+		Print the missing number as sumtotal sum
  */
 public class FindMissingNumber {
 	

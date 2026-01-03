@@ -19,15 +19,13 @@ public class BinarySearchTree {
 		if (latestRoot.value > node.value) {
 			if (latestRoot.left == null) {
 				latestRoot.left = node;
-				return;
-			} else {
+            } else {
 				insertNode(latestRoot.left, node);
 			}
 		} else {
 			if (latestRoot.right == null) {
 				latestRoot.right = node;
-				return;
-			} else {
+            } else {
 				insertNode(latestRoot.right, node);
 			}
 		}
