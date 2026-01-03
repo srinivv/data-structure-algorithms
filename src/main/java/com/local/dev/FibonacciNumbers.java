@@ -19,7 +19,7 @@ public class FibonacciNumbers {
             return 1;
         }
  
-        return fibonacciRecusion(number-1) + fibonacciRecusion(number -2); //tail recursion
+        return fibonacciRecusion(number - 1) + fibonacciRecusion(number - 2); //tail recursion
     }
  
     // Java program for Fibonacci number using Loop.

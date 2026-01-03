@@ -24,7 +24,7 @@ public class FindMaxNumber {
 	 * By sorting
 	 */
 	public static void findMax() {
-		int[] arr = { 10, 3, 4, 15, 6};
+		int[] arr = { 10, 3, 4, 15, 6 };
 		Arrays.sort(arr);
 		System.out.println("Min: " + arr[0]);
 		System.out.println("Max: " + arr[arr.length - 1]);
